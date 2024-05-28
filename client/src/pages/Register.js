@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Form, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,7 +15,6 @@ function Register() {
   const [form] = Form.useForm();
 
   const onFinish = async (values) => {
-  
     try {
       dispatch(ShowLoading());
       const response = await axios.post("/api/users/register", values);
@@ -89,8 +89,9 @@ function Register() {
             
           </Form.Item>
           {renderPasswordStrength()}
+          
           <div className="d-flex justify-content-between align-items-center my-3">
-            <Link to="/login">Click Here To Login</Link>
+          <Link to="/login" style={{ marginRight: '50px' }}>Click Here To Login</Link>
             <button className="secondary-btn" type="submit">
               Register
             </button>

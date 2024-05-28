@@ -120,6 +120,24 @@
  .auth{
     background-color: var(--secondary);
  }
+
+ .password-input {
+  position: relative;
+}
+
+.password-input input {
+  width: 100%;
+  padding-right: 30px; /* Add space for the icon */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
  /* 
 var(--secondary): This is a CSS variable reference.
 It uses the var() function to insert the value of a CSS custom property named

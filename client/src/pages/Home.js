@@ -1,4 +1,3 @@
-
 import { Col, message, Row } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -99,7 +98,9 @@ function Home() {
       <div>
         <Row gutter={[15, 15]}>
           {buses
-            .filter((bus) => bus.status === "Yet To Start")
+            .filter(
+              (bus) => bus.status === "Yet To Start" || "Running" || "Completed"
+            )
             .map((bus) => (
               <Col lg={12} xs={24} sm={24}>
                 <Bus bus={bus} />
